@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        double HRA=0;
+        double DA=0;
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        
+        if(num<15000){
+            HRA = 0.15*num;
+             DA =0.90*num ;
+        }
+        if(num>=15000){
+             HRA =5000;
+             DA = 0.98*num;
+            
+        }
+        
+        double GrossSalary = num+HRA+DA;
+        System.out.printf("%.2f",GrossSalary);
+        
+    }
+}
