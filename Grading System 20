@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String name=sc.nextLine();
+        int a=sc.nextInt(),b=sc.nextInt(),c=sc.nextInt(),d=sc.nextInt(),e=sc.nextInt();
+        int Tot_mark=a+b+c+d+e;
+        double Avg=(a+b+c+d+e)/5.0;
+        char Grade;
+        System.out.println("Name of the Student:"+name);
+        System.out.println("Total Mark:"+Tot_mark);
+        System.out.printf("Average Mark:%.1f\n",Avg);
+        if(Avg==100)
+        {
+            System.out.println("Grade Mark:S");
+        }
+        else if(Avg>=90)
+        {
+            System.out.println("Grade Mark:A");
+        }
+        else if(Avg>=80)
+        {
+            System.out.println("Grade Mark:B");
+        }
+        else if(Avg>=70)
+        {
+            System.out.println("Grade Mark:C");
+        }
+        else if(Avg>=60)
+        {
+            System.out.println("Grade Mark:D");
+        }
+        else if(Avg>=50)
+        {
+            System.out.println("Grade Mark:E");
+        }
+        else
+        {
+            System.out.println("Grade Mark:Fail");
+        }
+
+    }
+}
+}
