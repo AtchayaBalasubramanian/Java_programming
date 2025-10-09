@@ -7,7 +7,7 @@ public class Solution {
         String name=sc.nextLine();
         int a=sc.nextInt(),b=sc.nextInt(),c=sc.nextInt(),d=sc.nextInt(),e=sc.nextInt();
         int Tot_mark=a+b+c+d+e;
-        double Avg=(a+b+c+d+e)/5.0;
+        double Avg=(float)((a+b+c+d+e)/5);
         char Grade;
         System.out.println("Name of the Student:"+name);
         System.out.println("Total Mark:"+Tot_mark);
