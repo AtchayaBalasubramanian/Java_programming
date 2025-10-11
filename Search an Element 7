@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        int find=sc.nextInt();
+        boolean b=false;
+        for(int i=0;i<n;i++)
+        {
+            if(find==a[i])
+            {
+                b=true;
+            }
+            
+        }
+        if(b==true)
+        {
+            System.out.printf("%d is presented in an array.",find);
+        }
+        else
+        {
+            System.out.printf("%d is not presented in an array.",find);
+        }
+        
+    }
+}
