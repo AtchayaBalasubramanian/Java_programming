@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int dis_count=0;
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            boolean dis=true;
+            for(int j=0;j<i;j++)
+            {
+                if(a[i]==a[j])
+            {
+                 dis=false;
+                
+            }
+            }
+            if(dis)
+                {
+                    
+                    dis_count++;
+                }
+        }
+        if(dis_count==1)
+        {
+           System.out.println("There are "+dis_count+" distinct element in the array."); 
+        }
+        else
+        {
+            System.out.println("There are "+dis_count+" distinct elements in the array."); 
+        }
+        
+    }
+}
