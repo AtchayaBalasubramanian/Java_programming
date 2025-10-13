@@ -1,0 +1,53 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        int val=sc.nextInt();
+        int max=0;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i+1;j<n;j++)
+            {
+                if(a[i]>a[j])
+                {
+                   int temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        System.out.printf("The elements are in the order: ");
+        for(int i=0;i<n;i++)
+        {
+           System.out.printf("%d ",a[i]);
+        }
+        System.out.printf("\n");
+        System.out.printf("The Kth value is %d ",val);
+        
+       for(int i=0;i<n;i++)
+        {
+            for(int j=i+1;j<n;j++)
+            {
+                if(a[i]<a[j])
+                {
+                   int temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        System.out.printf("and Largest elements are ");
+        for(int i=0;i<val;i++)
+        {
+           System.out.printf("%d ",a[i]);
+        }
+        
+    }
+}
